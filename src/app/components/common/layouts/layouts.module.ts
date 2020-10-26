@@ -26,7 +26,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   exports: [
     ToolbarComponent,
     ContainerComponent,
-    LoaderComponent
+    LoaderComponent,
+    NavbarComponent
   ]
 })
 

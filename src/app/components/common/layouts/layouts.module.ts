@@ -4,12 +4,14 @@ import {RouterModule} from '@angular/router';
 import {MaterialModule} from '../../../material.module';
 import {ExtendedModule, FlexModule} from '@angular/flex-layout';
 import { ContainerComponent } from './container/container.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 
 @NgModule({
   declarations: [
-  ContainerComponent],
+  ContainerComponent,
+  ToolbarComponent],
     imports: [
         BrowserModule,
         RouterModule,

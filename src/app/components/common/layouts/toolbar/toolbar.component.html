@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="mat-elevation-z6 app-toolbar">
+  <div fxFlex="100%" fxLayout="row">
+    <a routerLink="/auth/home" mat-button style="font-size: 25px">Dutti Test</a>
+  </div>
+  <div fxFlex="100%" fxLayout="row" fxShow="true" fxHide.lt-md="true" *ngIf="activateMenu">
+    <span class="spacer"></span>
+  </div>
+  <div fxShow="true" fxHide.gt-sm="true" *ngIf="activateMenu">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

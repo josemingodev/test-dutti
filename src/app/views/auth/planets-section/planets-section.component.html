@@ -1,0 +1,18 @@
+<app-navbar sectionActive="planets" [componentLoadComplete]="componentLoadComplete" [activateMenu] = "true">
+  <div fxFlex="100%" fxLayout="column">
+    <app-planets-list [planetsList]="planetsList" *ngIf="componentLoadComplete"></app-planets-list>
+    <div fxFlex="100%" fxLayout="row" style="padding: 20px" *ngIf="componentLoadComplete">
+      <div fxFlex="50%" fxLayoutAlign="start">
+        <button mat-raised-button color="primary" (click)="nextPageButton('previous')" disabled="{{!previousPage}}">
+          Previous
+          page
+        </button>
+      </div>
+      <div fxFlex="50%" fxLayoutAlign="end" style="margin-right: 22px">
+        <button mat-raised-button color="primary" (click)="nextPageButton('next')" disabled="{{!nextPage}}">Next
+          page
+        </button>
+      </div>
+    </div>
+  </div>
+</app-navbar>

@@ -8,12 +8,15 @@ import {MaterialModule} from '../../material.module';
 import { HomeComponent } from './home/home.component';
 import { StarshipsSectionComponent } from './starships-section/starships-section.component';
 import {StarshipModule} from '../../components/starship/starship.module';
+import { PlanetsSectionComponent } from './planets-section/planets-section.component';
+import {PlanetModule} from '../../components/planet/planet.module';
 
 
 @NgModule({
   declarations: [
   HomeComponent,
-  StarshipsSectionComponent],
+  StarshipsSectionComponent,
+  PlanetsSectionComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -22,7 +25,8 @@ import {StarshipModule} from '../../components/starship/starship.module';
     LayoutsModule,
     FlexLayoutModule,
     MaterialModule,
-    StarshipModule
+    StarshipModule,
+    PlanetModule
   ],
   exports: [
     HomeComponent,

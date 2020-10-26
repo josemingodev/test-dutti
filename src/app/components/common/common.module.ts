@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {MaterialModule} from '../../material.module';
 import {ExtendedModule, FlexModule} from '@angular/flex-layout';
+import {LayoutsModule} from './layouts/layouts.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {ExtendedModule, FlexModule} from '@angular/flex-layout';
   imports: [
     FlexModule,
     MaterialModule,
-    ExtendedModule
+    ExtendedModule,
+    LayoutsModule
   ],
   exports: [
     BrowserModule,

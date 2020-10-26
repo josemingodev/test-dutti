@@ -7,6 +7,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MaterialModule} from '../../material.module';
 import { HomeComponent } from './home/home.component';
 import { StarshipsSectionComponent } from './starships-section/starships-section.component';
+import {StarshipModule} from '../../components/starship/starship.module';
 
 
 @NgModule({
@@ -20,10 +21,12 @@ import { StarshipsSectionComponent } from './starships-section/starships-section
     ReactiveFormsModule,
     LayoutsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    StarshipModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    StarshipsSectionComponent
   ],
   providers: []
 })

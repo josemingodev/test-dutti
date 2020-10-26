@@ -6,10 +6,12 @@ import {LayoutsModule} from '../../components/common/layouts/layouts.module';
 import {MaterialModule} from '../../material.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ExtendedModule, FlexModule} from '@angular/flex-layout';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

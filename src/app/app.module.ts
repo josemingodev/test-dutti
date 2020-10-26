@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import { RegisterComponent } from './views/no-auth/register/register.component';
+import {NoAuthViewsModule} from './views/no-auth/no-auth.views.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RegisterComponent
+    AppComponent
   ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NoAuthViewsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

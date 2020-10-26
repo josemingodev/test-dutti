@@ -5,13 +5,15 @@ import {MaterialModule} from '../../../material.module';
 import {ExtendedModule, FlexModule} from '@angular/flex-layout';
 import { ContainerComponent } from './container/container.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
 @NgModule({
   declarations: [
   ContainerComponent,
-  ToolbarComponent],
+  ToolbarComponent,
+  LoaderComponent],
     imports: [
         BrowserModule,
         RouterModule,

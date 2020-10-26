@@ -12,6 +12,8 @@ import { PlanetsListComponent } from './planets-list/planets-list.component';
     MaterialModule,
     FlexModule
   ],
-  exports: []
+  exports: [
+    PlanetsListComponent
+  ]
 })
 export class PlanetModule { }

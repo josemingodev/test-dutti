@@ -23,7 +23,8 @@ import { LoaderComponent } from './loader/loader.component';
     ],
   exports: [
     ToolbarComponent,
-    ContainerComponent
+    ContainerComponent,
+    LoaderComponent
   ]
 })
 

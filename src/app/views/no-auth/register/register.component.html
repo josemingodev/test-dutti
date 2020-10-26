@@ -1,3 +1,51 @@
-<p>
-  register works!
-</p>
+<app-container>
+  <div fxFlex="100%" fxLayout="column" fxLayoutAlign="center">
+    <app-toolbar title="Dutti Test Starships" [activateMenu]="false"></app-toolbar>
+    <div fxFlex="100%" fxLayout="column" fxLayoutAlign="center center" ngStyle.xs="margin-top:15px;"
+         style="margin-top: 75px">
+      <form (ngSubmit)="onSubmit()" [formGroup]="formRegister" fxFlex="100%" fxFlex.xs="100%"
+            fxLayout="column" fxLayoutAlign="start" fxLayoutAlign.xs="start" style="width: 300px;">
+        <div fxFlex="10%" fxLayout="row" fxLayoutAlign="center">
+          <h1>Create account</h1>
+        </div>
+        <mat-form-field style="margin-top: 50px">
+          <input [ngStyle]="{'width': '100%'}" formControlName="email" id="email"
+                 matInput
+                 placeholder="Email"
+                 required
+                 type="text">
+          <mat-error *ngFor="let validation of registerErrorMessages.email">
+            <mat-error *ngIf="formRegister.get('email').hasError(validation.type) && (formRegister.get('email').dirty
+              || formRegister.get('email').touched)" class="error-message">{{validation.message}}
+            </mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field style="margin-top: 25px">
+          <input [ngStyle]="{'width': '100%'}" formControlName="name" id="name"
+                 matInput
+                 placeholder="Name"
+                 required
+                 type="text">
+          <mat-error *ngFor="let validation of registerErrorMessages.name">
+            <mat-error *ngIf="formRegister.get('name').hasError(validation.type) && (formRegister.get('name').dirty
+              || formRegister.get('name').touched)" class="error-message">{{validation.message}}
+            </mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field style="margin-top: 25px">
+          <input [ngStyle]="{'width': '100%'}" type="password" formControlName="password"
+                 id="password"
+                 #password
+                 matInput
+                 placeholder="Password"
+                 required
+          >
+        </mat-form-field>
+        <button style="margin-top: 35px" mat-raised-button color="primary" type="submit" disabled="{{!isValidForm()}}">
+          Create Account
+        </button>
+      </form>
+    </div>
+  </div>
+</app-container>
+

@@ -22,6 +22,8 @@ import { LoaderComponent } from './loader/loader.component';
         ExtendedModule
     ],
   exports: [
+    ToolbarComponent,
+    ContainerComponent
   ]
 })
 

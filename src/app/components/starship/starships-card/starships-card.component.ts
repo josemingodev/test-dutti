@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {StarshipModel} from '../../../../model/starship/starship.model';
 
 @Component({
   selector: 'app-starships-card',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./starships-card.component.css']
 })
 export class StarshipsCardComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  @Input() starship: StarshipModel;
+  constructor() {
   }
 
+  ngOnInit() {
+    this.getStarshipId();
+  }
+  getStarshipId() {
+    this.starship.id = this.starship.url.split('/').filter(function (item) {
+      return item !== '';
+    }).slice(-1)[0];
+  }
 }

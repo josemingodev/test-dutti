@@ -1,3 +1,10 @@
-<p>
-  starships-card works!
-</p>
+<mat-card class="mat-elevation-z4">
+  <mat-card-header>
+    <mat-card-title style="font-size: 18px">{{starship.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image  class="img" src="https://starwars-visualguide.com/assets/img/starships/{{starship.id}}.jpg"
+       onerror="this.src = '/assets/artwork/not-found.png'">
+  <mat-card-content>
+    <p class="m-t-xs"><strong>Model</strong>: {{starship.model}}</p>
+  </mat-card-content>
+</mat-card>

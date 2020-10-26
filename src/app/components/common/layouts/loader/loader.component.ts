@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subject} from 'rxjs';
+import {LoaderService} from './loader.service';
 
 @Component({
   selector: 'app-loader',
@@ -10,9 +11,11 @@ export class LoaderComponent implements OnInit {
   public mode: string;
   public value: number;
   public isLoading: Subject<boolean>;
-  constructor() {
+  constructor(private loaderService: LoaderService) {
     this.mode = 'indeterminate';
     this.value = 50;
+    this.isLoading = this.loaderService.loading;
+
   }
 
   ngOnInit() {

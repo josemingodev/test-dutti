@@ -24,6 +24,7 @@ import { LoginComponent } from './login/login.component';
   ],
   exports: [
     RegisterComponent,
+    LoginComponent
   ],
   providers: []
 })

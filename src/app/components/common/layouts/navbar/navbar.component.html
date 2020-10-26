@@ -1,0 +1,18 @@
+<app-toolbar [sectionActive]="sectionActive" [sidenav]="sidenav" [activateMenu]="activateMenu"></app-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav fxLayout="row" class="sidenav" #sidenav fixedInViewport >
+    <mat-nav-list style="margin-top: 50px" cdkfocusregionstart *ngIf="activateMenu">
+      <a routerLink="/auth/starships" mat-list-item class="font-section" [ngClass]="{'select-section' :  sectionActive ==='starships'}"
+      >Starships</a>
+      <a routerLink="/auth/planets" mat-list-item class="font-section"
+         [ngClass]="{'select-section' :  sectionActive ==='planets'}">Planets</a>
+      <a routerLink="/login" mat-list-item
+         (click)="logout()">Logout</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-progress-bar mode="indeterminate" *ngIf="!componentLoadComplete"></mat-progress-bar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

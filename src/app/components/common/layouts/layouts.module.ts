@@ -6,6 +6,7 @@ import {ExtendedModule, FlexModule} from '@angular/flex-layout';
 import { ContainerComponent } from './container/container.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LoaderComponent } from './loader/loader.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -13,7 +14,8 @@ import { LoaderComponent } from './loader/loader.component';
   declarations: [
   ContainerComponent,
   ToolbarComponent,
-  LoaderComponent],
+  LoaderComponent,
+  NavbarComponent],
     imports: [
         BrowserModule,
         RouterModule,

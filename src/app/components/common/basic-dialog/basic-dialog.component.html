@@ -1,0 +1,11 @@
+<div mat-dialog-content fxLayoutAlign="center center" fxLayout="column">
+  <img fxShow="true" fxShow.xs="false" alt="" style="object-fit: contain;max-height: 500px;max-width: 500px"
+       src="{{data.imgSrc}}">
+  <img fxShow="false" fxShow.xs="true" alt="" style="object-fit: contain;max-height: 250px;max-width: 250px"
+       src="{{data.imgSrc}}">
+  <h3 fxShow="true" fxShow.xs="false">{{data.info}}</h3>
+  <h4 fxShow="false" fxShow.xs="true">{{data.info}}</h4></div>
+<div fxLayoutAlign="center center" mat-dialog-actions style="padding: 20px;">
+  <button style="margin-top: 15px;width: 150px" mat-raised-button color="primary"
+          type="submit" (click)="close()">{{data.textButton}}</button>
+</div>

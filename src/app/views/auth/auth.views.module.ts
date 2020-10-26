@@ -6,11 +6,13 @@ import {LayoutsModule} from '../../components/common/layouts/layouts.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MaterialModule} from '../../material.module';
 import { HomeComponent } from './home/home.component';
+import { StarshipsSectionComponent } from './starships-section/starships-section.component';
 
 
 @NgModule({
   declarations: [
-  HomeComponent],
+  HomeComponent,
+  StarshipsSectionComponent],
   imports: [
     BrowserModule,
     FormsModule,

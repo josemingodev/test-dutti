@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {StarshipModel} from '../../../../model/starship/starship.model';
 
 @Component({
-  selector: 'app-starships-card',
-  templateUrl: './starships-card.component.html',
-  styleUrls: ['./starships-card.component.css']
+  selector: 'app-starship-card',
+  templateUrl: './starship-card.component.html',
+  styleUrls: ['./starship-card.component.css']
 })
-export class StarshipsCardComponent implements OnInit {
+export class StarshipCardComponent implements OnInit {
   @Input() starship: StarshipModel;
   constructor() {
   }

@@ -4,6 +4,11 @@
   </div>
   <div fxFlex="100%" fxLayout="row" fxShow="true" fxHide.lt-md="true" *ngIf="activateMenu">
     <span class="spacer"></span>
+    <a routerLink="/auth/starships" mat-button class="font-section"
+       [ngClass]="{'select-section': sectionActive==='starships'}">Starships</a>
+    <a routerLink="/auth/planets" mat-button
+       [ngClass]="{'select-section': sectionActive==='planets'}" class="font-section">Planets</a>
+    <a routerLink="/logout" mat-button (click)="logout()" class="font-section">Logout</a>
   </div>
   <div fxShow="true" fxHide.gt-sm="true" *ngIf="activateMenu">
     <button mat-icon-button (click)="sidenav.toggle()">

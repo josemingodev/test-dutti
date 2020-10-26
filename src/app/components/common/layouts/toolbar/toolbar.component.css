@@ -7,3 +7,9 @@
 .spacer {
   flex: 1 auto;
 }
+.select-section{
+  border-bottom: 1px solid white;
+}
+.font-section{
+  font-size: 17px
+}

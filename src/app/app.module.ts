@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {NoAuthViewsModule} from './views/no-auth/no-auth.views.module';
+import {MaterialModule} from './material.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {NoAuthViewsModule} from './views/no-auth/no-auth.views.module';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        NoAuthViewsModule
+        NoAuthViewsModule,
+        MaterialModule
     ],
   providers: [],
   bootstrap: [AppComponent]

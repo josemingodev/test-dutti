@@ -1,3 +1,5 @@
-<p>
-  starships-list works!
-</p>
+<div fxFlex="100%" class="content" fxLayout="row wrap"  fxLayoutGap="25px grid" fxLayoutGap.xs="15px grid">
+  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let starship of starshipsList">
+    <app-starship-card [starship]="starship"></app-starship-card>
+  </div>
+</div>

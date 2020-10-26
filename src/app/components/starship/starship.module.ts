@@ -13,6 +13,6 @@ import {StarshipsListComponent} from './starships-list/starships-list.component'
     MaterialModule,
     FlexModule
   ],
-  exports: []
+  exports: [StarshipsListComponent]
 })
 export class StarshipModule { }
